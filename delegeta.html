@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div id="container">
+    <div class="pane">
+      <h3>Лошадь</h3>
+      <p>Домашняя лошадь - животное семейства непарнокопытных, одомашненный и единственный сохранившийся подвид дикой
+        лошади, вымершей в дикой природе, за исключением небольшой популяции лошади Пржевальского.</p>
+      <button class="remove-button">[x]</button>
+    </div>
+    <div class="pane">
+      <h3>Осёл</h3>
+      <p>Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший важную историческую роль в развитии
+        хозяйства и культуры человека. Все одомашненные ослы относятся к африканским ослам.</p>
+      <button class="remove-button">[x]</button>
+    </div>
+    <div class="pane">
+      <h3>Кошка</h3>
+      <p>Кошка, или домашняя кошка (лат. Félis silvéstris cátus), — домашнее животное, одно из наиболее популярных
+        (наряду с собакой) "животных-компаньонов". С точки зрения научной систематики, домашняя кошка — млекопитающее
+        семейства кошачьих отряда хищных. Ранее домашнюю кошку нередко рассматривали как отдельный биологический вид.
+      </p>
+      <button class="remove-button">[x]</button>
+    </div>
+  </div> -->
+  <style>
+    .slider {
+      border-radius: 5px;
+      background: #E0E0E0;
+      background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+      width: 310px;
+      height: 15px;
+      margin: 5px;
+    }
+
+    .thumb {
+      width: 10px;
+      height: 25px;
+      border-radius: 3px;
+      position: relative;
+      left: 10px;
+      top: -5px;
+      background: blue;
+      cursor: pointer;
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div id="slider" class="slider">
+      <div class="thumb" id="thumb"></div>
+    </div>
+
+    <script>
+      thumb.onmouseover = function (event) {
+        let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+        // let shiftY = event.clientY - thumb.getBoundingClientRect().top;
+
+        // thumb.style.position = 'absolute';
+        // thumb.style.zIndex = 1000;
+
+        moveAt(event.clientX);
+
+        function moveAt(clientX) {
+          thumb.style.left = clientX - thumb.offsetWidth + 'px';
+        }
+        function onMouseMove(event) {
+          moveAt(event.clientX);
+        }
+
+        // (3) перемещать по экрану
+        slider.addEventListener('mousemove', onMouseMove);
+      }
+    </script>
+
+    <!-- Кликни на элемент списка, чтобы выделить его.
+    <br>
+
+    <ul id="ul">
+      <li>Кристофер Робин</li>
+      <li>Винни Пух</li>
+      <li>Тигра</li>
+      <li>Кенга</li>
+      <li>Кролик. Просто Кролик.</li>
+    </ul> -->
+
+    <!-- <script>
+      // let li = document.querySelectorAll('li');
+      ul.onclick = function (event) {
+        // event.target.classList.add('selected');
+        if (event.ctrlKey || event.metaKey) {
+          event.target.classList.add('selected');
+        } else {
+          let selected = ul.querySelectorAll('.selected');
+          for (let elem of selected) {
+            elem.classList.remove('selected');
+          }
+          event.target.classList.add('selected');
+        }
+      }
+    </script> -->
+
+
+
+
+    <!-- <script> -->
+
+    <!-- // container.onclick = function (event) {
+    // if (event.target.className != 'remove-button') return;
+
+    // let pane = event.target.closest('.pane');
+    // pane.remove();
+
+    // }
+    // document.addEventListener('click', function (event) {
+    // if (event.target.className != 'remove-button') return;
+    // let pane = event.target.closest('.pane');
+    // pane.style.display = 'none';
+    // }) -->
+    <!-- </script> -->
+  </body>
+
+</html>

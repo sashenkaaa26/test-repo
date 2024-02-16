@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let i, j, sum = 0;
+    // for (i = 0, j = 10 ; i < 10 ; i++, j-- ) {
+    //  sum += i * j
+    //  console.log(sum)
+    // }
+
+    //     let data = [1, 2, 3, 4, 5, 6, 7, 8, 9], sum = 0;
+    // for(let element of data) {
+    // sum += element;
+    // console.log(sum)
+    // }
+
+    // let text = "Na па па па па па па па Batman!";
+    // let wordSet = new Set(text.split(" "));
+    // console.log(wordSet)
+    // let unique = [];
+    // for (let word of wordSet) {
+    //   unique.push(word);
+    // }
+    // console.log(unique)
+    // let point = {
+    //  х: 3,
+    //  у: 4,
+    //  valueOf: function() { return Math.hypot (this.х, this.у); }
+    // };
+    // console.log(point)
+
+    //     let table = new Array(10); // 10 строк таблицы
+    //     for (let i = 0; i < table, length; i++) {
+    //     table[i] = new Array(10);
+    //      // Каждая строка имеет 10 столбцов
+    // }
+    // // Инициализировать массив
+    // for (let row = 0; row < table, length; row++) {
+    // for(let col = 0; col < table[row].length; col++) {
+    // table[row][col] = row*col;
+    // }
+
+    // }
+
+    // function Clock({ template }) {
+
+    //   let timer;
+
+    //   function render() {
+    //     let date = new Date();
+
+    //     let hours = date.getHours();
+    //     if (hours < 10) hours = '0' + hours;
+
+    //     let mins = date.getMinutes();
+    //     if (mins < 10) mins = '0' + mins;
+
+    //     let secs = date.getSeconds();
+    //     if (secs < 10) secs = '0' + secs;
+
+    //     let output = template
+    //       .replace('h', hours)
+    //       .replace('m', mins)
+    //       .replace('s', secs);
+
+    //     // console.log(output);
+    //   }
+
+    //   this.stop = function() {
+    //     clearInterval(timer);
+    //   };
+
+    //   this.start = function() {
+    //     render();
+    //     timer = setInterval(render, 1000);
+    //   };
+
+    // }
+
+    // let clock = new Clock({template: 'h:m:s'});
+    // clock.start();
+
+    // class MyClock {
+    //   constructor({ template }) {
+    //     this.template = template;
+    //   }
+    //   render() {
+    //     let date = new Date();
+
+    //     let hours = date.getHours();
+    //     if (hours < 10) hours = '0' + hours;
+
+    //     let mins = date.getMinutes();
+    //     if (mins < 10) mins = '0' + mins;
+
+    //     let secs = date.getSeconds();
+    //     if (secs < 10) secs = '0' + secs;
+
+    //     let output = this.template
+    //       .replace('h', hours)
+    //       .replace('m', mins)
+    //       .replace('s', secs);
+
+    //     // console.log(output);
+    //   }
+    //   stop() {
+    //     clearInterval(this.timer);
+    //   }
+    //   start() {
+    //     this.render();
+    //     this.timer = setInterval(() => this.render(), 1000);
+    //   }
+
+    // }
+    // let clock = new MyClock({ template: 'h:m:s' });
+    // clock.start();
+
+
+    // function sumTo(x) {
+    //   let sum = 0;
+    //   for (let i = 0; i <= x; i++) {
+    //      sum += i;
+    //     // console.log(sum)
+    //   }
+    //   return sum;
+    //   // console.log(sum)
+    // }
+    // console.log(sumTo(5))
+
+    // function sumTo(n) {
+    //   if (n == 1) {
+    //     return n
+    //   } else {
+    //     return n + sumTo(n - 1)
+    //   }
+
+    // }
+    // // console.log(sumTo(10))
+
+    // function factorial(n){
+    //   if( n == 1){
+    //     return n;
+    //   }else{
+    //     return n * factorial(n-1)
+    //   }
+
+    // }
+    //  console.log(factorial(5))
+
+
+    // function printNumbers(from,to){
+    //   for(let i = from; i<= to; i++){
+    //     console.log(i)
+    //   }
+    // }
+    // printNumbers(5,10)
+
+    // let user = {
+    //   name: "John",
+    //   surname: "Smith",
+
+    //   get fullName() {
+    //     return `${this.name} ${this.surname}`;
+    //   },
+
+    //   // set fullName(value) {
+    //   //   [this.name, this.surname] = value.split(" ");
+    //   // }
+    // };
+
+    // console.log(user.fullName = "Alice Cooper");
+
+
+    // let calculator = {
+    //   read()  {
+    //      this.a = +prompt('Number', 0);
+    //      this.b = +prompt('Number', 0);
+
+    //     },
+    //   sum(){
+    //     return this.a + this.b
+    //   },
+    //   mul(){
+    //     return this.b * this.a
+    //   }
+    // }
+    // calculator.read();
+    // alert(calculator.sum());
+    // alert(calculator.mul());
+
+    // function Accumulator(startingValue) {
+    //   this.value = startingValue;
+    //   this.read = function () {
+    //     this.value += +prompt('Number', 0)
+    //   }
+
+    // }
+
+    // let accumulator = new Accumulator(3);
+    // accumulator.read();
+    // alert(accumulator.value);
+
+
+    //Поиск кол во одинаковіх символов в строке
+
+    // function XO(str) {
+    //   let firstSymbol = 'x';
+    //   let secondSymbol = 'o';
+
+    //   let firstSymbolAmount = 0;
+    //   let secondSymbolAmount = 0;
+
+    //   let formattedString = str.toLowerCase();
+
+    //   for (let i = 0; i < formattedString.length; i++) {
+    //     if (formattedString[i] === firstSymbol) {
+    //       firstSymbolAmount++
+    //     };
+    //     if (formattedString[i] === secondSymbol) {
+    //       secondSymbolAmount++
+    //     }
+    //   }
+
+    //   return firstSymbolAmount === secondSymbolAmount
+    // }
+    //     const XO = str => {
+    //   str = str.toLowerCase().split('');
+    //   return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+    // }
+
+    // console.log(XO('dssxxoo'));
+
+    // function maps(array1) {
+    //   let array = array1.map((x) => x * 2);
+    //   return array
+    // }
+    // console.log(maps([2, 3, 4]))
+    // function wave(str) {
+    //   let result = [];
+    //   if ([...str].length === 0) return [];
+    //   for (let i = 0; i < str.length; i++) {
+    //     let copy = str.split('');
+    //     // if (copy[i] === ' ') continue;
+    //     copy[i] = copy[i].toUpperCase('');
+    //     result.push(copy.join(''))
+    //   }
+    //   return result
+    // }
+    // console.log(wave('two words'))
+
+    //Повторить массив х раз
+
+    // function explode(x) {
+    //   let rate = [];
+    //   if (typeof x[0] === "number" && typeof x[1] === "number") {
+    //     let repeatArray = x[0] + x[1];
+    //     for (let i = 0; i < repeatArray; i++) {
+    //       rate.push(x)
+    //     }
+    //   } else if (typeof x[0] === "number" && typeof x[1] !== "number") {
+    //     let repeatArray = x[0];
+    //     for (let i = 0; i < repeatArray; i++) {
+    //       rate.push(x)
+    //     }
+    //   } else if (typeof x[0] !== "number" && typeof x[1] === "number") {
+    //     let repeatArray = x[1];
+    //     for (let i = 0; i < repeatArray; i++) {
+    //       rate.push(x)
+    //     }
+    //   } else if (typeof x[0] !== "number" && typeof x[1] !== "number") {
+    //     return 'Void!'
+    //   }
+    //   return rate
+    //   console.log(rate)
+    // }
+
+    //Сколько людей лайкнули
+
+    // function likes(names) {
+    //   let str = '';
+    //   if (names.length == 0) {
+    //     return 'no one likes this'
+    //   } else if (names.length == 1) {
+    //     for (let i = 0; i < names.length; i++) {
+    //       str = names[i] + " likes this"
+    //     }
+    //   } else if (names.length == 2) {
+    //     for (let i = 0; i < names.length; i++) {
+    //       str = names[0] + " and " + names[1] + " likes this";
+    //     }
+    //   } else if (names.length == 3) {
+    //     for (let i = 0; i < names.length; i++) {
+    //       str = names[0] + ",  " + names[1] + " and " + names[2] + " likes this";
+    //     }
+    //   } else if (names.length >= 4) {
+    //     for (let i = 0; i < names.length; i++) {
+    //       str = names[0] + ",  " + names[1] + " and " + (names.length - 2) + " others likes this";
+    //     }
+    //   }
+
+    //   return str
+    // }
+    // console.log(likes(['sasha', 'pete', 'sasha', 'dima', 'roma', 'artem']))
+
+    // function likes(names) {
+    //   return {
+    //     0: 'no one likes this',
+    //     1: `${names[0]} likes this`,
+    //     2: `${names[0]} and ${names[1]} like this`,
+    //     3: `${names[0]}, ${names[1]} and ${names[2]} like this`,
+    //     4: `${names[0]}, ${names[1]} and ${names.length - 2} others like this`,
+    //   }[Math.min(4, names.length)]
+    // }
+
+
+    // function sumTwoSmallestNumbers(numbers) {
+    //   let sortNumbers = numbers.sort((a, b) => a - b);
+    //   let sum = sortNumbers[0] + sortNumbers[1];
+    //   return sum;
+
+    // }
+    // sumTwoSmallestNumbers([3,48,5,13,2])
+
+
+    // function getGrade(s1, s2, s3) {
+    //   let averageNumber = (s1 + s2 + s3) / 3;
+    //   if (averageNumber >= 90 && averageNumber <= 100) {
+    //     return 'A';
+    //   } else if (averageNumber >= 80 && averageNumber <= 90) {
+    //     return 'B';
+    //   } else if (averageNumber >= 70 && averageNumber <= 80) {
+    //     return 'C';
+    //   } else if (averageNumber >= 60 && averageNumber <= 70) {
+    //     return 'D';
+    //   } else if (averageNumber >= 0 && averageNumber <= 60) {
+    //     return 'F';
+    //   }
+    // }
+
+    // getGrade(23, 56, 1)
+
+    //каждый второй элемент массива начиная с первого
+
+    // function removeEveryOther(arr) {
+    //   let array2 = arr.filter((item, index) => ((index + 1) % 2));
+
+    //   return array2;
+    // }
+
+    // removeEveryOther([3,5,7,5,8,7])
+
+    // function feast(beast, dish) {
+    //   if (beast[0] == dish[0]) {
+    //     return true
+    //   } else {
+    //     return false
+    //   }
+    // }
+    // feast('sasha','ol')
+
+    // function duplicateCount(text) {
+    //   let arr = []
+    //   for (let i = 0; i < text.length; i++) {
+    //     if (text.split(text[i]).length - 1 > 1) {
+    //       arr.push(text[i])
+    //     }
+
+    //   }
+    //   let arr2 = arr.filter((element, index) => {
+    //     return arr.indexOf(element) === index;
+    //   })
+
+    //   return arr2.length;
+
+
+    // }
+
+    // duplicateCount('dd33sah')
+
+    // замениьь символі
+
+    // function DNAtoRNA(dna) {
+    //   dna.replace(/T/g, "U")
+    // }
+
+    // DNAtoRNA('GCAT');
+
+
+    // function duplicateCount(text) {
+    //   let text2 = text.toLowerCase()
+    //   let arr = []
+    //   for (let i = 0; i < text2.length; i++) {
+    //     if (text2.split(text2[i]).length - 1 > 1) {
+    //       if(arr.indexOf(text2[i]) === -1)
+    //           arr.push(text2[i])
+    //     }
+
+    //   }
+
+    //   return arr.length;
+    // }
+    // function countPositivesSumNegatives(input) {
+    //   let input2 = [];
+    //   let count1 = 0;
+    //   let count2 = 0;
+    //   for (let i = 0; i < input.length; i++) {
+    //     if (input[i] > 0) {
+    //       count1 += input[i]
+    //     } else if (input[i] < 0) {
+    //       count2 += input[i]
+    //     }
+    //   }
+    //   input2.push(count1, count2)
+    //   return input2
+    // }
+    // countPositivesSumNegatives([2, 4, -65, 8, -4, 0])
+    // function twiceAsOld(dadYearsOld, sonYearsOld) {
+    //   let valueYears = (sonYearsOld*2) - dadYearsOld;
+    //   return valueYears;
+
+    // }
+    // twiceAsOld(55,30)
+
+    // function isIsogram(str) {
+    //   let str2 = str.toUpperCase();
+    //   for (let i = 0; i < str2.length; i++) {
+    //     if (str2.split(str2[i]).length - 1 > 1) {
+    //       return false
+    //     }
+    //   }
+    //   return true
+    // }
+    // isIsogram('sas')
+    // function switchItUp(number) {
+    //   switch (number) {
+    //     case 0:
+    //       alert('Zero')
+    //       break;
+    //     case 1:
+    //       alert('One')
+    //       break;
+    //     case 2:
+    //       alert('Two')
+    //       break;
+    //     case 3:
+    //       alert('Three')
+    //       break;
+    //     case 4:
+    //       alert('Four')
+    //       break;
+    //     case 5:
+    //       alert('Five')
+    //       break;
+    //     case 6:
+    //       alert('Six')
+    //       break;
+    //     case 7:
+    //       alert('Seven')
+    //       break;
+    //     case 8:
+    //       alert('Eight')
+    //       break;
+    //     case 9:
+    //       alert('Nine')
+    //       break;
+    //     default:
+    //       alert('no value')
+    //   }
+
+    // }
+
+    // function filter_list(list) {
+    //   let result = list.filter((item)=> Number.isFinite(item));
+    //   return result
+    // }
+
+    // filter_list([3,5,'f',6,'b','123'])
+    // function greet(language) {
+    //   let value1 = 'english';
+    //   let value2 = 'czech';
+    //   let value3 = 'danish';
+    //   let value4 = 'dutch';
+    //   let value5 = 'estonian'
+    //   let value6 = 'finnish';
+    //   let value7 = 'flemish';
+    //   let value8 = 'french';
+    //   let value9 = 'german';
+    //   let value10 = 'irish'
+    //   let value11 = 'italian';
+    //   let value12 = 'latvian'
+    //   let value13 = 'lithuanian';
+    //   let value14 = 'polish';
+    //   let value15 = 'spanish'
+    //   let value16 = 'swedish';
+    //   let value17 = 'welsh'
+
+    //   switch (language) {
+    //     case value1:
+    //       return ('Welcome')
+    //       break;
+    //     case value2:
+    //       return ('Vitejte')
+    //       break;
+    //     case value3:
+    //       return ('Velkomst')
+    //       break;
+    //     case value4:
+    //       return ('Welkom')
+    //       break;
+    //     case value5:
+    //       return ('Tere tulemast')
+    //       break;
+    //     case value6:
+    //       return ('Tervetuloa')
+    //       break;
+    //     case value7:
+    //       return ('Welgekomen')
+    //       break;
+    //     case value8:
+    //       return ('Bienvenue')
+    //       break;
+    //     case value9:
+    //       return ('Willkommen')
+    //       break;
+    //     case value10:
+    //       return ('Failte"')
+    //       break;
+    //     case value11:
+    //       return ('Benvenuto')
+    //       break;
+    //     case value12:
+    //       return ('Gaidits')
+    //       break;
+    //     case value13:
+    //       return ('Laukiamas')
+    //       break;
+    //     case value14:
+    //       return ('Witamy')
+    //       break;
+    //     case value15:
+    //       return ('Bienvenido')
+    //       break;
+    //     case value16:
+    //       return ('Valkommen')
+    //       break;
+    //     case value17:
+    //       return ('Croeso')
+    //       break;
+    //     default:
+    //       return 'Welcome'
+    //       break;
+    //   }
+
+
+
+    // }
+
+    // greet('estonian');
+
+    //сколько дней до конца года
+
+    // function toDayOfYear(arr) {
+    //   let date = new Date(arr[2],arr[1] - 1,arr[0]);
+    //   let date2 = new Date(arr[2],1-1,1);
+    //   return Math.round(((date - date2)/86400000)+1) //из за деления на милисекунді число меньше чем нужно
+
+    // }
+
+    // toDayOfYear([31,12,2024])
+
+    //каждую букву в верхний регистр
+
+    //     function wordToUpperCase(str) {
+    //       let strToArray = str.split(' ');
+    //       let resultArray = [];
+    //       for (let i = 0; i < strToArray.length; i++) {
+    //         resultArray.push(strToArray[i].charAt(0).toUpperCase() + strToArray[i].substring(1));
+    //       }
+    //       let result = resultArray.join(' ')
+    //       return result;
+
+    //     }
+    //     wordToUpperCase('sasha mladinova petya sulakov')
+
+    //     String.prototype.toJadenCase = function (str) {
+    //    let strToArray = this.split(' ');
+    //       let resultArray = [];
+    //       for (let i = 0; i < strToArray.length; i++) {
+    //         resultArray.push(strToArray[i].charAt(0).toUpperCase() + strToArray[i].substring(1));
+    //       }
+    //       let result = resultArray.join(' ')
+    //       return result;
+    // };
+
+    // function isValidWalk(walk) {
+
+    //прогулка
+
+    //   if (walk.length == 10) {
+    //     return true
+    //   }else{
+    //     return false
+    //   }
+    // }
+    // isValidWalk(['d','r','t'])
+
+    //     function isValidWalk(walk) {
+    //   let ns = 0, we = 0;
+    //     for (let dir of walk) {
+    //       if (dir == 'n') ns += 1;
+    //       if (dir == 's') ns -= 1;
+    //       if (dir == 'w') we += 1;
+    //       if (dir == 'e') we -= 1;
+    //     }
+
+    //     return walk.length == 10 && ns === 0 && we === 0;
+    // }
+
+    // function finalGrade(exam, projects) {
+    //   if (exam >= 90 && projects >= 10) {
+    //     return 100;
+    //   } else if (exam >= 75 && projects >= 5) {
+    //     return 90;
+    //   } else if (exam >= 50 && projects >= 2) {
+    //     return 75;
+    //   } else {
+    //     return 0
+    //   }
+    // }
+
+    // finalGrade(50,2)
+    // function getDivisorsCnt(n) {
+    //   let count = 0;
+    //   for (let i = 1; i <= n; i++) {
+    //     if (n % i == 0) {
+    //       count++
+    //     }
+    //   }
+    //   return count
+    // }
+    // getDivisorsCnt(12)
+
+    // function strToArray(str){
+    //   if (str.includes('-')) {
+    //     return str.split('-');
+    //   } else if (str.includes('_')) {
+    //     return str.split('_');
+    //   }
+    // }
+    // // // const strToArr = strToArray();
+
+    // function toCamelCase(str) {
+    //   let resultArray = [];
+    //   let newString = ''
+
+    //   let strToArr = str.split(/\-|_/)
+
+    //   if (strToArr[0].charAt(0) == strToArr[0].charAt(0).toUpperCase()) {
+    //     for (let i = 0; i < strToArr.length; i++) {
+    //       resultArray.push(strToArr[i].charAt(0).toUpperCase() + strToArr[i].substring(1));
+    //     }
+    //   } else {
+    //     resultArray.push( strToArr[0].charAt(0).toLowerCase() + strToArr[0].substring(1))
+    //     for (let i = 1; i < strToArr.length; i++) {
+    //       resultArray.push( strToArr[i].charAt(0).toUpperCase() + strToArr[i].substring(1));
+    //     }
+    //   }
+    //   newString = resultArray.join('')
+    //   return newString;
+    // }
+    // // const strToArr = strToArray(str);
+    // toCamelCase('sasha_dasha_sasha')
+
+    // function sumMix(x) {
+    //   let sum = 0;
+    //   for (let i = 0; i < x.length; i++) {
+    //     sum += Number(x[i])
+    //   }
+    //   return sum
+    // }
+
+    // sumMix([12,5,'2', '7'])
+
+    // function howMuchILoveYou(nbPetals) {
+    //   let phrases = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+    //   let result = ''
+
+
+    //   if (nbPetals < 7)
+    //     return phrases[nbPetals - 1]
+
+    //   for (let i = 1; i < nbPetals; i++) {
+    //     result = phrases[i]
+    //     if (i == 6) {
+    //       i = 0
+    //       nbPetals = nbPetals - i;
+    //     }
+
+    //   }
+    //   return result
+    // }
+
+    // howMuchILoveYou(7)
+
+
+    // async  function loadJson(url) {
+    //   return await fetch(url)
+    //     .then(response => {
+    //       if (response.status == 200) {
+    //         return response.json();
+    //       } else {
+    //         throw new Error(response.status);
+    //       }
+    //     })
+
+    //   // return
+    // }
+
+    // loadJson('no-such-user.json') // (3)
+    //   .catch(alert);
+
+    // const dfs = (tree, start) => {
+    //   const stack = [start];
+
+    //   while (stack.length > 0) {
+    //     const vert = stack.shift(); // Выбираем первую вершину из стека
+
+    //     if (tree[vert]) {
+    //       stack.unshift(...tree[vert]); // Добавляем вершины в начало стека
+    //     }
+    //   }
+    // };
+
+    // dfs(19,1)
+
+
+    //BinarySearch
+
+    // const arrSearch = [1,2,3,4,5,6,7,8,9];
+    // let binarySearch = function(arr,elem){
+    //   let start = 0;
+    //   let end = arr.length-1;
+    //   let middle = Math.floor((start + end)/2);
+    //   while(arr[middle] !== elem && start <= end){
+    //     if(elem < arr[middle]){
+    //       end = middle-1
+    //     }else{
+    //       start= middle+1
+    //     }
+    //     middle = Math.floor((start+end)/2)
+    //   }
+    //   if(arr[middle] === elem){
+    //     return middle
+    //   }
+    //   return arr[middle] === elem ? middle : -1
+
+    // }
+    // binarySearch(arrSearch, 10)
+
+
+    //Сортировка пузырьком
+
+    // function bblSort(arr) {
+
+    //   for (var i = 0; i < arr.length; i++) {
+
+    //     // Last i elements are already in place
+    //     for (var j = 0; j < (arr.length - i - 1); j++) {
+
+    //       // Checking if the item at present iteration
+    //       // is greater than the next iteration
+    //       if (arr[j] > arr[j + 1]) {
+
+    //         // If the condition is true
+    //         // then swap them
+    //         var temp = arr[j]
+    //         arr[j] = arr[j + 1]
+    //         arr[j + 1] = temp
+    //       }
+    //     }
+    //   }
+
+    //   // Print the sorted array
+    //   console.log(arr);
+    // }
+
+    // This is our unsorted array
+    // var arr = [234, 43, 55, 63, 5, 6, 235, 547];
+
+    // Now pass this array to the bblSort() function
+    // bblSort(arr);
+
+    // function bbllSort(arr) {
+    //   for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i])
+    //     for (let j = 0; j < arr.length - i - 1; j++) {
+    //       if (arr[j] > arr[j + 1]) {
+    //         let currentValue = arr[j];
+    //         arr[j] = arr[j + 1];
+    //         arr[j + 1] = currentValue
+
+    //       }
+
+    //     }
+    //   }
+
+    // }
+    // let arr = [234, 43, 55, 63, 5, 6, 235, 547];
+    // bbllSort(arr)
+
+
+    // const bubbleSort = (arr) => {
+    //   let swapped;
+
+    //   do {
+    //     swapped = false;
+    //     for (let i = 0; i < arr.length - 1; i++) {
+    //       if (arr[i] > arr[i + 1]) {
+    //         let temp = arr[i];
+    //         arr[i] = arr[i + 1];**
+    //         arr[i + 1] = temp;**
+    //         swapped = true;
+    //       }
+    //     }
+    //   } while (swapped);
+
+    //   return arr;
+    // };
+    //[myArray[i], myArray[i + 1]] = [myArray[i + 1], myArray[i]]; -можно заменить строчки **
+
+
+    //Сортировка вставками
+    // function insertionSort(arr, n) {
+    //   let i, key, j;
+    //   for (i = 1; i < n; i ++) {
+    //     key = arr[i];
+    //     j = i - 1;
+
+    //     /* Move elements of arr[0..i-1], that are
+    //     greater than key, to one position ahead
+    //     of their current position */
+    //     while (j >= 0 && arr[j] > key) {
+    //       arr[j + 1] = arr[j];
+    //       j = j - 1;
+    //     }
+    //     arr[j + 1] = key;
+    //   }
+    // }
+
+    // let arrAr = [34,54,2,76,13];
+    // let n = arrAr.length;
+
+    // insertionSort(arrAr,n)
+
+    // function insertionSort2(arr){
+    //   let i,key,j;
+    //   let n = arr.length;
+    //   for( i = 1; i<n; i++){
+    //     key = arr[i];
+    //     j = i - 1;
+    //     while(j >= 0 && arr[j] > key){
+    //       arr[j+1] = arr[j];
+    //       j = j - 1
+    //     }
+    //     arr[j+1] = key
+    //   }
+
+    // }
+    // let arrAr = [34,54,2,76,13];
+    // insertionSort2(arrAr)
+    // function sumArray(array) {
+    //   let sum = 0;
+    //   let min = Math.min.apply(null, array);
+    //   let max = Math.max.apply(null, array);
+
+    //     for(let i = 0 ;i < array.length;i++){
+    //       sum +=array[i];
+    //     }
+    //    let sumResult = sum-(min+max);
+    //    return sumResult
+
+    // }
+    // sumArray([4,5,8,9,1,3])
+    // function compareNumbers(a, b) {
+    //     return a.length - b.length;
+    //   }
+    // function sortByLength(array) {
+    //   let sortArray = array.sort(compareNumbers);
+    //   return sortArray
+    // }
+
+    // sortByLength(['Sasha', 'sa', 'sas'])
+
+    // const rot13 = (message) => {
+    //   const originalAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    //   const cipher = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+    //   return message.replace(/[a-z]/gi, letter => cipher[originalAlpha.indexOf(letter)])
+    // }
+
+    // rot13('sasha hello')
+    // function findUniq(arr) {
+    //   return +arr.filter( (value) => { return arr.indexOf(value) == arr.lastIndexOf(value) } )
+
+    // }
+    // findUniq([3, 5, 3, 5, 1, 2, 2])
+
+    // function findShort(s) {
+    //   let arr = s.split(' ');
+    //   let arr2 = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     arr2.push(arr[i].length)
+
+    //   }
+    //   return arr2
+
+    // }
+    // findShort('sasha sa sabdra')
+    // function abbrevName(name) {
+    //   let initials = '';
+    //   let arr2 = []
+
+    //   let arr = name.split(' ');
+    //   for (let i = 0; i < arr.length; i++) {
+    //     arr2.push(arr[i].charAt(0).toUpperCase())
+    //   }
+    //   initials = arr2.join('.');
+    //   return initials
+
+
+    // }
+
+    // abbrevName('sasha mladinova')
+    // function strCount(str, letter) {
+    //   let count = 0;
+    //   let word = letter;
+    //   for (let i = 0; i < str.length; i++) {
+    //     if (str[i] == letter) {
+    //       count++
+    //     }
+    //   }
+    //   return count
+    // }
+    // strCount('sasghafas','s')
+
+
+
+  </script>
+</body>
+
+</html>
